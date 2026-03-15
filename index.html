@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Market Research | Insights & Analysis</title>
+    <meta name="description" content="Premium Market Research Dashboard powered by AI and Location Data" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="logo">
+                <i data-lucide="scan-search"></i>
+                <h1>Agentic <span>Market Research</span></h1>
+            </div>
+            <div class="header-actions">
+                <div id="search-container">
+                    <input type="text" id="pac-input" placeholder="Search for opportunities..." />
+                    <i data-lucide="search" class="search-icon"></i>
+                </div>
+                <button id="auth-btn" class="btn btn-primary">Connect</button>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li class="active" data-view="dashboard"><i data-lucide="layout-dashboard"></i> Dashboard</li>
+                        <li data-view="map"><i data-lucide="map"></i> Map View</li>
+                        <li data-view="insights"><i data-lucide="bar-chart-3"></i> Insights</li>
+                        <li data-view="bookmarks"><i data-lucide="bookmark"></i> Bookmarks</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="content-area">
+                <!-- Dashboard View -->
+                <div id="dashboard-view" class="view active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="label">Total Leads</span>
+                            <span class="value" id="total-leads">0</span>
+                            <div class="trend positive">+12% vs last week</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Analysis Points</span>
+                            <span class="value" id="analysis-points">24</span>
+                            <div class="trend positive">+5.2k processed</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">Saved Clusters</span>
+                            <span class="value" id="saved-clusters">8</span>
+                            <div class="trend">Last sync: 1m ago</div>
+                        </div>
+                    </div>
+
+                    <div class="main-grid">
+                        <div class="results-panel card">
+                            <div class="card-header">
+                                <h2>Recent Opportunities</h2>
+                                <button class="btn btn-sm">View All</button>
+                            </div>
+                            <div id="results-list" class="results-list">
+                                <div class="placeholder-text">Enter a location to start researching.</div>
+                            </div>
+                        </div>
+                        <div class="side-panel">
+                            <div class="map-preview card">
+                                <div id="map-container"></div>
+                            </div>
+                            <div class="analysis-card card">
+                                <div class="card-header">
+                                    <h2>Market Summary</h2>
+                                </div>
+                                <div id="dashboard-analysis" class="analysis-content">
+                                    <div class="placeholder-text">Search a location to generate report.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map View -->
+                <div id="map-view" class="view">
+                    <div class="card full-height">
+                        <div id="full-map-container"></div>
+                    </div>
+                </div>
+
+                <!-- Insights View -->
+                <div id="insights-view" class="view">
+                    <div class="insights-grid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Market Density</h2>
+                            </div>
+                            <div id="density-chart" class="chart-container">
+                                <div class="placeholder-text">Analyze an area to generate insights.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Competitor Trends</h2>
+                            </div>
+                            <div id="trends-chart" class="chart-container">
+                                <div class="placeholder-text">No data available.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bookmarks View -->
+                <div id="bookmarks-view" class="view">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Saved Bookmarks</h2>
+                            <button id="refresh-bookmarks" class="btn btn-sm btn-primary">Refresh</button>
+                        </div>
+                        <div id="bookmarks-list" class="results-list">
+                            <div class="placeholder-text">You haven't saved any bookmarks yet.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2026 Agentic AI Dashboard. All rights reserved.</p>
+            <div class="status-indicator">
+                <span class="dot"></span> Systems Online
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
