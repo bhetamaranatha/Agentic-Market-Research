@@ -2,7 +2,6 @@
 
 A professional-grade market research tool that leverages the **Google Places API (New)** and **Supabase** to provide high-fidelity location intelligence, competitive analysis, and strategic entry advisory.
 
-![Dashboard Preview](https://raw.githubusercontent.com/username/repo/main/preview.png) *(Replace with actual screenshot link after upload)*
 
 ## 🌟 Key Features
 
