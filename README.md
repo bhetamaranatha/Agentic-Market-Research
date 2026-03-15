@@ -78,4 +78,4 @@ A proprietary density metric that goes beyond "business count." It calculates th
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-**Build by [Your Name/Handle]** — *Transforming spatial data into strategic action.*
+**Build by Marth** 
